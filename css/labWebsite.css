@@ -1,0 +1,330 @@
+/* ### Trafford Data Lab website styles (extending the labBase styles) ### */
+
+.container
+{
+    overflow: auto;
+    position: relative;     /* Required for footer to be positioned always at the bottom of the page */
+    min-height: 100%;       /* Required for footer to be positioned always at the bottom of the page */
+}
+
+/* NOTE: all sizes are expressed within the header elements are in px not em as we don't want the header to increase in size. This is because it might become too big on a small phone screen and prevent the user seeing the page content. */
+.header
+{
+    position: fixed;
+    background-color: white;
+    width: 100%;
+    text-align: left;
+    border-bottom: 1px solid #757575;
+    z-index: 2;
+}
+
+.navbar
+{
+    float: right;
+    margin: 15px 0 0 0;
+}
+
+.menuItem
+{
+    display: block;
+    float: left;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.menuItem a
+{
+    border-bottom: 1px solid white;        /* required so that we can simulate a link underline in the a:hover without the header wobbling by 1px */
+    padding: 0 11px;
+    margin: 0;
+    color: #757575;
+    text-decoration: none;
+}
+
+.menuItem a:hover
+{
+    border-bottom: 1px solid #db3a00;
+}
+
+.main
+{
+    color: #212121;
+    margin: auto;
+    margin-top: 70px;
+    margin-bottom: 30px;
+    padding: 0 20px 5em 12px;     /* 5em padding-bottom Required for footer to be positioned always at the bottom of the page (This is the height of the footer) */
+}
+
+.main p
+{
+    line-height: 1.8em;
+}
+
+.main li
+{
+    line-height: 2em;
+}
+
+.footer
+{
+    color: #212121;
+    width: 100%;
+    height: 5em;               /* Required for footer to be positioned always at the bottom of the page (matched to the height of the Trafford logo) */
+    margin: 0;
+    padding: 0;
+    background-color:#f0f0f0;
+    overflow: hidden;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.leftFooter
+{
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.rightFooter
+{
+    background-color: white;
+    height: 100%;
+    display: inline-block;
+    float: right;
+}
+
+/* Additions to the classes defined above - this is because we are using the <header>, <section> and <footer> HTML 5 tags */
+.header, .main, .footer
+{
+    display: block;
+    box-sizing: border-box;
+}
+
+.noBulletPoints, .noBulletPoints * *
+{
+    list-style-type: none;  /* remove the list-item bullet from the top level and all sub-level list items */
+}
+
+.traffordDataLabLogo
+{
+    margin: 9px 12px 0 12px;
+    padding: 0;
+}
+
+.logoTrafford
+{
+    height: 5em;
+}
+
+.logoMedia
+{
+    font-size: 2em;
+    padding: 18px 0 0 12px;
+    margin: 0;
+}
+
+.linkMedia
+{
+    color: #212121;
+    padding: 0px 10px 0px 0px;
+}
+
+.license
+{
+    font-size: 0.7em;
+    padding: 10px 0px 0px 12px;
+}
+
+/* end notes for references/credits etc. */
+.endNotes
+{
+    border-top: 2px dotted #f0f0f0;
+    font-size: 0.8em;
+    margin-top: 30px;
+}
+
+.endNotes div p     /* these are for the references to indent any lines following the first */
+{
+    padding-left: 2em;
+    text-indent: -2em;
+}
+
+/* data tables */
+.dataTable
+{
+    width: 100%;
+    border-collapse: collapse;
+    text-align: right;
+    font-size: 0.9em;
+}
+
+.dataTable th
+{
+    font-family: 'Roboto', sans-serif;
+    color: #757575;
+    font-size: 1.1em;
+    text-align: right;  /* IE fix - ignores the declaration set on the main table class so have to repeat here */
+}
+
+.dataTable td
+{
+    border-bottom: 1px dotted #e0e0e0;
+}
+
+.dataTable, .dataTable th, .dataTable tbody tr:last-of-type
+{
+    border-bottom: 2px solid #212121;
+}
+
+.dataTable th:nth-child(1), .dataTable td:nth-child(1)
+{
+    text-align: left;   /* the first column is left-aligned, the others are right-aligned (set in the main .dataTable class) */
+}
+
+/* thumbnail images */
+.thumbnail
+{
+    float: left;
+    margin-right: 20px;
+    border: 1px solid #f0f0f0;
+    box-shadow: 3px 3px 5px #f0f0f0;
+}
+
+.thumbnail:hover
+{
+    border: 1px solid #db3a00;
+}
+
+/* These are for form elements such as the input used on pages containing the filter. Creates a Lab-orange gradient border which fades in when the element has focus. */
+.highlightFormElement
+{
+    transition: all 0.30s ease-in-out;
+    outline: none;  /* a custom outline is implemented in .highlightFormElement:focus maintaining accessibility and providing uniform appearance cross-browser */
+    padding: 3px 0px 3px 3px;
+    margin: 5px 1px 3px 0px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.highlightFormElement:focus
+{
+    border: 1px solid #db3a00;
+    box-shadow: 0 0 5px #db3a00;
+}
+
+/* visualisations and/or text content layouts */
+.singleColumn
+{
+    width: 600px;
+    margin: auto;
+}
+
+.doubleColumn div, .doubleColumnImgTxt div, .doubleColumnTxtImg div
+{
+    width: 50%;
+    float: left;
+}
+
+.doubleColumn div:nth-child(1) p, .doubleColumnTxtImg div:nth-child(1) p
+{
+    margin-right: 30px;     /* to provide space between any text content and the right column when displayed in 2-column format */
+}
+
+.doubleColumn div:nth-child(2) p, .doubleColumnImgTxt div:nth-child(2) p
+{
+    margin-left: 30px;      /* to provide space between any text content and the left column when displayed in 2-column format */
+}
+
+.doubleColumn::after, .doubleColumnImgTxt::after, .doubleColumnTxtImg::after
+{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.singleColumn img, .doubleColumn img, .doubleColumnImgTxt img, .doubleColumnTxtImg img
+{
+    width: 100%;
+}
+
+/* Fix for IE not displaying the SVGs loaded via object tag correctly */
+.singleColumn object, .doubleColumn object, .doubleColumnImgTxt object, .doubleColumnTxtImg object
+{
+    width: 100%;
+}
+
+/* changes due to screen width */
+@media (min-width:1300px)
+{
+    .main
+    {
+        width: 1240px;           /* Amended this from 800px so that the content width stays the same once the size expands beyond 1300px */
+    }
+
+    /* visualisations and/or text content layouts */
+    .singleColumn
+    {
+        width: 50%;
+    }
+}
+
+@media (max-width:800px)
+{
+    /* visualisations and/or text content layouts */
+    .doubleColumn, .doubleColumnImgTxt div:nth-child(1), .doubleColumnTxtImg div:nth-child(2)
+    {
+        width: 500px;
+        margin: auto;
+    }
+
+    .doubleColumn div, .doubleColumnImgTxt, .doubleColumnImgTxt div:nth-child(2), .doubleColumnTxtImg div:nth-child(1)
+    {
+        width: 100%;
+    }
+
+    .doubleColumnImgTxt div, .doubleColumnTxtImg div
+    {
+        float: none;
+    }
+
+    .doubleColumn div:nth-child(1) p, .doubleColumnTxtImg div:nth-child(1) p
+    {
+        margin-right: 0px;     /* remove space between any text content and the right column when displayed in 2-column format */
+    }
+
+    .doubleColumn div:nth-child(2) p, .doubleColumnImgTxt div:nth-child(2) p
+    {
+        margin-left: 0px;      /* remove space between any text content and the left column when displayed in 2-column format */
+    }
+}
+
+@media (max-width:620px)
+{
+    .navbar
+    {
+        float: none;
+        padding: 0 0 20px 0;
+    }
+
+    .main
+    {
+        margin-top: 120px;
+    }
+
+    /* visualisations and/or text content layouts */
+    .singleColumn, .doubleColumn, .doubleColumn div, .doubleColumnImgTxt, .doubleColumnImgTxt div, .doubleColumnImgTxt div:nth-child(1), .doubleColumnTxtImg, .doubleColumnTxtImg div, .doubleColumnTxtImg div:nth-child(2)
+    {
+        width: 100%;
+    }
+
+    .doubleColumn div:nth-child(1) p, .doubleColumnTxtImg div:nth-child(1) p
+    {
+        margin-right: 0px;     /* remove space between any text content and the right column when displayed in 2-column format */
+    }
+
+    .doubleColumn div:nth-child(2) p, .doubleColumnImgTxt div:nth-child(2) p
+    {
+        margin-left: 0px;      /* remove space between any text content and the left column when displayed in 2-column format */
+    }
+}
