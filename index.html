@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+    <head>
+        <title>CDU Data Science Team</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+        <meta charset="UTF-8"/>
+        <meta name="keywords" content="open, data, open data, data visualisation, shiny, patient experience, patient, experience, information, information, system, nottingham, nottinghamshire, app, apps, application, applications"/>
+        <meta name="description" content="The CDU Data Science Team provide data analysis to Nottinghamshire Healthcare NHS Foundation Trust."/>
+
+        <link rel="stylesheet" href="css/base.css"/>
+        <link rel="stylesheet" href="css/main.css"/>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans%7CRoboto"/>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"/>
+
+        <style>
+            h1
+            {
+                margin-bottom: 0;   /* to make the heading closer to the intro text */
+            }
+
+            .intro
+            {
+                margin-top: 0;  /* to make the text closer to the heading */
+            }
+
+            .thumbnail
+            {
+                margin-top: 0.5em;
+            }
+
+            /* Specific customisation of the card for this page */
+            .cardContainer
+            {
+                grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));   /* only want a max of 2 columns on normal displays due to the contents of each being large - so I've overridden the minmax card width from the default */
+            }
+
+            .card
+            {
+                padding: 0.2em 0.5em 0.5em 0.5em;   /* the top padding is different to make the gap look balanced all around as the .cardHead content has padding of its own. */
+
+                /* For browsers which don't support grid layouts */
+                width: 45%; /* these cards are larger than the default due to the contents of each being so large */
+                margin: 1em 2%;
+            }
+
+            .cardHead
+            {
+                font-size: 1.15em;
+                padding: 0 0 0.25em 0;
+            }
+
+            .fa-head-side-mask
+            {
+                display: inline-block;
+                float: left;
+                margin-right: 0.1em;
+                font-size: 7em;
+                color: #fff;
+            }
+
+            #covid19
+            {
+                display: block;
+                border-radius: 3.5em;
+                min-height: 7em;
+                margin: 2em 0 2em 0;
+                padding-right: 2em;
+                background-color: #ccc;
+                color: #212121;
+            }
+
+            #covid19:hover, #covid19:hover h2
+            {
+                color: #fff;
+                background-color: #5d77a3;
+            }
+
+            #covid19Content
+            {
+                display: inline-block;
+                margin-left: 0.5em;
+            }
+
+            #covid19Content h2
+            {
+                margin-bottom: 0;
+                color: #212121;
+            }
+
+            #covid19Content p
+            {
+                margin-top: 0.25em;
+                margin-left: 2px;
+            }
+
+
+            /* For browsers which don't support grid layouts */
+            @media (max-width:750px)
+            {
+                .cardContainer
+                {
+                    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));   /* to fix issue on small displays where the minimum width is still to large and so causes horizontal scrolling */
+                }
+
+                .card
+                {
+                    width: 100%;
+                    margin: 1em 0;
+                }
+            }
+
+            /* For browsers which support grid layouts - Reset the widths and margins applied above as they aren't required when using grid layout */
+            @supports (display: grid)
+            {
+                .card
+                {
+                    width: auto;
+                    margin: 0;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <header>
+                <nav>
+                    <ul id="a11yNav">
+                        <li><a href="#main" class="themeBlockDark">Skip to main content</a></li>
+                        <li><a href="#footer" class="themeBlockDark">Skip to footer</a></li>
+                    </ul>
+                    <img src="img/nottshc-cdu-data-science-logo.png" alt="CDU Data Science Team" width="93" class="traffordDataLabLogo"/>
+                    <p class="hideContent">Main Menu</p>
+                    <ul class="navbar">
+                        <li><a href="charticles.html">Charticles</a></li>
+                        <li><a href="data.html">Data</a></li>
+                        <li><a href="learning.html">Learning</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <main id="main">
+                <h1>CDU Data Science Team</h1>
+
+                <p class="intro">Supporting data analysis in Nottinghamshire Healthcare NHS Foundation Trust.</p>
+
+                <a href="covid19.html" id="covid19" class="smallText">
+                    <span class="fas fa-head-side-mask"></span>
+                    <span id="covid19Content">
+                        <h2>COVID-19 Resources</h2>
+                        <p>Visit the COVID-19 page for all our outputs relating to the coronavirus pandemic.</p>
+                    </span>
+                </a>
+
+                <section id="apps" aria-label="items will open in a new window">
+                    <h2>Apps</h2>
+
+                    </div>
+                </section>
+            </main>
+
+            <footer id="footer">
+                <div class="leftFooter">
+                    <p class="hideContent">CDU Data Science Team are on the following platforms: </p>
+                    
+                    <br />
+                   
+            </footer>
+        </div>
+    </body>
+</html>
