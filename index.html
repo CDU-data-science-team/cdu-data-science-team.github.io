@@ -4,8 +4,8 @@
         <title>CDU Data Science Team</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
         <meta charset="UTF-8"/>
-        <meta name="keywords" content="open, data, open data, data visualisation, shiny, patient experience, patient, experience, information, information, system, nottingham, nottinghamshire, app, apps, application, applications"/>
-        <meta name="description" content="The CDU Data Science Team provide data analysis to Nottinghamshire Healthcare NHS Foundation Trust."/>
+        <meta name="keywords" content="open, data, open data, data visualisation, visualisation, visualisations, shiny, information, interactive, information, system, nottinghamshire, nottingham, app, apps, application, applications"/>
+        <meta name="description" content="Analysis by the CDU Data Science Team for Nottinghamshire Healthcare NHS Foundation Trust. Credit: Trafford Data Lab"/>
 
         <link rel="stylesheet" href="css/base.css"/>
         <link rel="stylesheet" href="css/main.css"/>
@@ -132,10 +132,9 @@
                     <img src="img/nottshc-cdu-data-science-logo.png" alt="CDU Data Science Team" width="93" class="traffordDataLabLogo"/>
                     <p class="hideContent">Main Menu</p>
                     <ul class="navbar">
-                        <li><a href="charticles.html">Charticles</a></li>
-                        <li><a href="data.html">Data</a></li>
-                        <li><a href="learning.html">Learning</a></li>
-                        <li><a href="about.html">About</a></li>
+                        <li><a href="https://cdu-data-science-team.github.io/team-blog/">Blog</a></li>
+                        <li><a href="https://cdu-data-science-team.github.io/understanding-your-data/">Understanding Your Data</a></li>
+                        <li><a href="https://cdu-data-science-team.github.io/understanding-your-data/about.html">About</a></li>
                     </ul>
                 </nav>
             </header>
@@ -143,18 +142,66 @@
             <main id="main">
                 <h1>CDU Data Science Team</h1>
 
-                <p class="intro">Supporting data analysis in Nottinghamshire Healthcare NHS Foundation Trust.</p>
-
-                <a href="covid19.html" id="covid19" class="smallText">
-                    <span class="fas fa-head-side-mask"></span>
-                    <span id="covid19Content">
-                        <h2>COVID-19 Resources</h2>
-                        <p>Visit the COVID-19 page for all our outputs relating to the coronavirus pandemic.</p>
-                    </span>
-                </a>
+                <p class="intro">Analysis by CDU Data Science Team for Nottinghamshire Healthcare NHS Foundation Trust.</p>
 
                 <section id="apps" aria-label="items will open in a new window">
                     <h2>Apps</h2>
+
+                    <div class="cardContainer">
+                        <div class="card labBorder">
+                            <a href="https://involve.nottshc.nhs.uk:8443/experience_b/" target="_blank"><h3 class="cardHead themeLink">Patient Feedback</h3><span class="cardBody">Shiny dashboard visualising and analysing patient experience data from Nottinghamshire Healthcare NHS Foundation Trust.
+</span><img src="img/patient-experience.png" class="thumbnail" alt="Patient Feedback app screenshot"/></a><br class="hideContent"/>
+                            
+                        </div>
+
+                        <div class="card labBorder">
+                            <a href="https://involve.nottshc.nhs.uk:8443/text_mining_dashboard/" target="_blank"><h3 class="cardHead themeLink">Text Mining Patient Experience Feedback</h3><span class="cardBody">Text mining and visualization of NHS patient feedback.</span><img src="img/text-mining-pat-exp.PNG" class="thumbnail" alt="Text Minding Patient Experience app screenshot"/></a><br class="hideContent"/>
+                            
+                        </div>
+
+                        <div class="card labBorder">
+                            <a href="https://involve.nottshc.nhs.uk:8443/pharmacy_forecasting/" target="_blank"><h3 class="cardHead themeLink">Pharmacy Forecasting</h3><span class="cardBody">This project aims to develop, test and implement an open source analytical tool in R that will support and improve existing inventory management practices within our Trust pharmacy.</span><img src="img/pharmacy.PNG" class="thumbnail" alt="Pharmacy Forecasting app screenshot"/></a><br class="hideContent"/>
+                            
+                        </div>
+
+                        <div class="card labBorder">
+                            <a href="https://involve.nottshc.nhs.uk:8443/shiny_endominer/" target="_blank"><h3 class="cardHead themeLink">EndomineR app</h3><span class="cardBody">EndoMineR-Shiny is the interface for the package <a href="https://github.com/sebastiz/EndoMineR_Shiny" target="_blank">EndoMineR</a> The package aims to extract information from endoscopic and associated pathology reports.</span><img src="img/endominer.PNG" class="thumbnail" alt=""/></a><br class="hideContent"/>
+                            
+                        </div>
+                    </div>
+                </section>
+
+                <section id="templates">
+                    <h2>Templates</h2>
+
+                    <div class="cardContainer">
+                        <div class="card labBorder">
+                            <a href="https://github.com/CDU-data-science-team/presentation-template"><h3 class="cardHead themeLink">Nottinghamshire Healthcare NHS Foundation Trust Branded Slides</h3><span class="cardBody">Nottinghamshire Healthcare NHS Foundation Trust template slides in R using xaringan.</a>.</span><img src="img/branded-slides.PNG" class="thumbnail" alt=""/></a><br class="hideContent"/>
+                            
+                        </div>
+
+ 
+                    </div>
+                </section>
+
+                <section id="Packages">
+                    <h2>Packages</h2>
+
+                    <div class="cardContainer">
+                        <div class="card labBorder">
+                            <a href="https://github.com/CDU-data-science-team/nottshcMethods"><h3 class="cardHead themeLink">nottshcMethods</h3></a><br class="hideContent"/>
+                            <span class="cardBody">A collection of functions to help with visualising and analysing clinical data.</span>
+                        </div>
+
+                        <div class="card labBorder">
+                            <a href="https://github.com/CDU-data-science-team/honos"><h3 class="cardHead themeLink">honos</h3></a><br class="hideContent"/>
+                            <span class="cardBody">Visualising and Analysing the HoNOS (Health of the Nation Outcome Scales)</span>
+                        </div>
+
+                        <div class="card labBorder">
+                            <a href="https://github.com/CDU-data-science-team/nottshcPublic"><h3 class="cardHead themeLink">nottshcPublic</h3></a><br class="hideContent"/>
+                            <span class="cardBody">demonstrating how we make use of R to work with databases</span>
+                        </div>
 
                     </div>
                 </section>
@@ -162,10 +209,13 @@
 
             <footer id="footer">
                 <div class="leftFooter">
-                    <p class="hideContent">CDU Data Science Team are on the following platforms: </p>
-                    
+                    <p class="hideContent">CDU Data Science Team can be contacted: </p>
+                    <a class="linkMedia" href="https://twitter.com/DataScienceNott" aria-label="CDU Data Science Team on Twitter" target="_blank"><span class="fab fa-twitter-square" title="CDU Data Science Team on Twitter"></span><span class="hideContent">Twitter, </span></a>
+                    <a class="linkMedia" href="https://github.com/CDU-data-science-team" aria-label="CDU Data Science Team on GitHub" target="_blank"><span class="fab fa-github" title="CDU Data Science Team on GitHub"></span><span class="hideContent">GitHub, </span></a>
                     <br />
-                   
+                    <a href="https://www.trafforddatalab.io/" class="smallText" aria-label="Credit to Trafford Data Lab for building their open website">Credit: Trafford Data Lab</a>
+                </div>
+                
             </footer>
         </div>
     </body>
